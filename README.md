@@ -2,4 +2,4 @@
 
 Hi Chiquis
 
-Security audit 2 passed ✅
+Security audit passed ✅
