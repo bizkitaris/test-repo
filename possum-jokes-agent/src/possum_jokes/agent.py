@@ -12,8 +12,8 @@ import random
 from prompt import POSSEUM_JOKES_SYSTEM_PROMPT
 from jokes import JokeStyle, COMMUNAL_MESSAGES
 
-# Load environment variables
-project_root = Path(__file__).resolve().parent
+# Load environment variables from project root (where .env should be)
+project_root = Path(__file__).resolve().parent.parent.parent
 env_path = project_root / '.env'
 load_dotenv(env_path, override=True)
 
