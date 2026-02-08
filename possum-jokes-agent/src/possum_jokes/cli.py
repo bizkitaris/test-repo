@@ -64,7 +64,7 @@ async def generate_joke(style: JokeStyle = "pun", topic: str | None = None, comm
     
     try:
         result = await agent.run(prompt, deps=deps)
-        joke = result.data
+        joke = result.output
         
         # Add communal message if requested
         if communal:
@@ -161,7 +161,7 @@ async def interactive_mode():
             deps = JokeDeps(style=current_style)
             try:
                 result = await agent.run(user_input, deps=deps)
-                print(f"\n{result.data}\n")
+                print(f"\n{result.output}\n")
             except Exception as e:
                 print(f"Error: {e}")
 
